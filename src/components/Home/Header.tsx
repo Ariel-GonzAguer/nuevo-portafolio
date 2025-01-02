@@ -4,15 +4,15 @@
 import { useState } from "react";
 
 // zustand
-import useStore from "../../../zustand/useStore";
+import useStore from "../../zustand/useStore";
 
 // estilos css
-import styles from "../Home.module.css";
+import styles from "./Home.module.css";
 
 // hooks
-import { useRandomColor } from "../../../hooks/useRandomColor";
+import { useRandomColor } from "../../hooks/useRandomColor";
 
-export default function Home() {
+export default function Header() {
   // const [, navigate] = useLocation();
   const { diseñoInStore } = useStore();
 
@@ -20,7 +20,7 @@ export default function Home() {
   const [diseño] = useState<string>(diseñoInStore);
 
   return (
-    <section className={`${styles.home} ${diseño}`}>
+
       <header>
         <h1
           className={`${styles[diseño]}`}
@@ -32,6 +32,6 @@ export default function Home() {
           style={diseño === "light" ? { color: useRandomColor() } : undefined}>
           Neat Web Development</h2>
       </header>
-    </section>
+
   );
 }
