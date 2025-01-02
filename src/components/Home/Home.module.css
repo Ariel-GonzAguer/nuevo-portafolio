@@ -1,0 +1,83 @@
+/* general */
+.home {
+  display: grid;
+  /* grid-template: repeat(3, 1fr) / repeat(3, 1fr); */
+  text-align: center;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  cursor: default;
+
+  & header {
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+}
+
+/* íconos */
+
+.icon {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.neumorphismIcon {
+  border-radius: 100px;
+  box-shadow: -5px 5px 10px #bebebe, 5px -5px 10px #ffffff;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 230, 234);
+    transition: transform 1s ease;
+  }
+}
+
+.neubrutalismIcon {
+  color: #ff4910;
+  background-color: #7dfaff;
+  border: 4px solid black;
+  box-shadow: 2px 2px 5px black, 2px 2px 5px black;
+  margin: 10px auto;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 1s ease;
+  }
+}
+
+/* light */
+.lightIcon {
+  &:hover {
+    transform: rotate(360deg);
+    transition: transform 1s ease;
+  }
+}
+
+/* dark */
+.darkIcon {
+  border-radius: 50%;
+
+  &:hover {
+    background-image: url("/imgs/matrix.webp");
+  }
+}
+
+/* spooky */
+.spookyIcon {
+  &.icon {
+    transition: none !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+}

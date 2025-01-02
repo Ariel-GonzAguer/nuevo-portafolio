@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Portafolio de Arie GonzAgüer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Holas 😁✌🏼**\
+Este repositorio está dedicado a mi portafolio personal.
+Escrito en Typescript, con el framework React através de Vite.
 
-Currently, two official plugins are available:
+Agradezco cualquier crítica o sugerencia constructiva 🌟
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Características
 
-## Expanding the ESLint configuration
+1. ¡Elige un diseño para la página de inicio!\
+   Quiero mostrar algo de mi creatividad en la parte de diseño. Actualemente hay 6 estilos disponibles:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Neumorfismo -> limpio y suave.
+- Oscuro -> clásico y simple.
+- Claro -> ¡colores por todos lados!
+- Neubrutalismo -> impactante y audaz.
+- Espeluznante -> ¡cuidado!
+- Gamer -> retro y divertido.
 
-- Configure the top-level `parserOptions` property like this:
+1. Combo secreto para teclado\
+   Cuando el usuario presiona una combinación de teclas en determinado orden, cambiará la estética del estilo gamer.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+##TechStack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- React.
+- Vite.
+- Zustand.
+- Wouter.
+- Vitest + Testing Library.
+- EmailJS.
+- Sonner.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+##Próximos pasos
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Agregar más estilos.
+- Invita a otros desarrolladores a escribir algunos artículos.
+
+##Licencia
+
+[MIT](https://choosealicense.com/licenses/mit/)

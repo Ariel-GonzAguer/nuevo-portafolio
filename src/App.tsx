@@ -1,15 +1,21 @@
+// enrutado- wouter
+import { Route, Switch } from "wouter";
 
+// componentes
+import Home from "./components/Home/Home/Home"
 
 function App() {
 
 
   return (
-    <>
-      <section>
-        <h1>Hola Mundo</h1>
-      </section>
 
+    <>
+      <Switch>
+        <Route path="/" component={Home} />
+      </Switch>
     </>
+
+
   )
 }
 

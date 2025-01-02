@@ -1,15 +1,617 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* transition: 0.75s ease-out allow-discrete; */
+}
+
+html {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  color: whitesmoke;
+  font-family: "Roboto-Mono", Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style: none !important;
+}
+
+a {
+  all: unset;
+}
+
+@font-face {
+  font-family: "Roboto-Mono";
+  src: local("Roboto_Mono"),
+    url(/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Open_Sans";
+  src: local("OpenSans-Regular"),
+    url(/fonts/Open_Sans/OpenSans-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kanit_Regular";
+  src: local("Kanit_Regular"),
+    url(/fonts/Kanit/Kanit_Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lexend_Mega";
+  src: local("Lexend_Mega_Regular"),
+    url(/fonts/Lexend_Mega/Lexend_Mega_Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Creepster";
+  src: local("Creepster"),
+    url(/fonts/Creepster/Creepster-Regular.ttf) format("woff2");
+}
+
 .neumorphism {
-  color: aliceblue;
+  background-color: #e4eefc;
+  color: #7a859b;
+
+  & h1 {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: 3.3rem;
+    margin: 10px auto;
+  }
+
+  & h2 {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin: 0 auto 15px;
+  }
+
+  & p {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+  }
+
+  & .pChoose {
+    box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+    color: black;
+    font-weight: bolder;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  & input {
+    font-family: "Open_Sans", Arial, Helvetica, sans-serif;
+    background-color: #bcd8ff;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    box-shadow: -5px 5px 10px #bebebe, 5px -5px 10px #ffffff;
+    margin: 20px;
+    padding: 10px;
+
+    &:hover {
+      background-color: #bcd8ff;
+      color: black;
+      border: 2px solid pink;
+    }
+  }
 }
+
 .dark {
-  color: aliceblue;
+  background-color: black;
+  color: whitesmoke;
+  
+  & h1 {
+    font-family: "Roboto-Mono", Arial, Helvetica, sans-serif;
+    font-size: 3.3rem;
+  }
+
+  & h2 {
+    font-family: "Roboto-Mono", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  & p {
+    font-family: "Roboto-Mono", Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+  }
+
+  & input {
+    font-family: "Roboto-Mono", Arial, Helvetica, sans-serif;
+    border: 2px solid whitesmoke;
+
+    &:hover {
+      background-color: black;
+      color: whitesmoke;
+    }
+  }
 }
+
 .light {
-  color: aliceblue;
+  background-color: whitesmoke;
+
+  & h1 {
+    font-family: "Kanit_Regular", Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;
+    color: black;
+  }
+
+  & h2 {
+    font-family: "Kanit_Regular", Arial, Helvetica, sans-serif;
+    font-size: 2.1rem;
+    color: black;
+  }
+
+  & p {
+    font-family: "Kanit_Regular", Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: black;
+  }
+
+  & .pChoose {
+    font-size: 1.3rem;
+  }
+
+  & input {
+    font-family: "Kanit_Regular", Arial, Helvetica, sans-serif;
+    background-color: #e4eefc;
+    border-radius: 6px;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 10px;
+
+    &:hover {
+      background-color: teal !important;
+      color: whitesmoke;
+    }
+  }
 }
+
 .neubrutalism {
+  background-color: #fff2ab;
+  text-transform: uppercase;
+
+  & h1 {
+    font-family: "Lexend_Mega", Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    color: black;
+    margin: 5px auto;
+  }
+
+  & h2 {
+    font-family: "Lexend_Mega", Arial, Helvetica, sans-serif;
+    font-size: 2.1rem;
+    color: black;
+    border: 6px solid black;
+    background-color: #f68be0;
+    margin: 10px auto 15px;
+    /* box-shadow: 2px 2px 5px black, 2px 2px 5px black; */
+    width: 100%;
+  }
+
+  & p {
+    font-family: "Lexend_Mega", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #ff00f6;
+    font-weight: bolder;
+  }
+
+  & .pChoose {
+    color: rgb(222, 44, 225);
+    font-size: 1.3rem;
+    margin: 10px;
+  }
+
+  & input {
+    font-family: "Lexend_Mega", Arial, Helvetica, sans-serif;
+    background-color: #91ed91;
+    border: 4px solid black;
+    box-shadow: 2px 2px 5px black, 2px 2px 5px black;
+    border-radius: 6px;
+    margin: 15px;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    &:hover {
+      background-color: #be9cf7;
+      color: black;
+    }
+  }
+}
+
+.spooky {
+  background-color: grey;
+  color: whitesmoke;
+  font-family: "Creepster", Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+  letter-spacing: 0.4rem;
+  position: relative;
+
+  & h1 {
+    font-size: 4rem;
+    margin: 10px auto;
+  }
+
+  & .option {
+    color: whitesmoke;
+
+    & p {
+      color: red;
+    }
+  }
+
+  & .zero :hover {
+    animation: fantasmaBorroso 1s linear;
+  }
+
+  & .one :hover {
+    color: wheat;
+    animation: shakeBottom 3s linear;
+  }
+
+  & .two :hover {
+    color: black;
+    animation: fantasmaBorroso 0.5s both linear;
+  }
+
+  & .three :hover {
+    color: greenyellow;
+    animation: shakeBottom 1s infinite linear;
+  }
+}
+
+.gamer {
   color: aliceblue;
 }
-.spooky {
-  color: aliceblue;
+
+.cursorIluminado {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: none;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+}
+
+/* animaciones */
+.fantasmaBorroso {
+  -webkit-animation: fantasmaBorroso 1s infinite;
+  animation: fantasmaBorroso 1s infinite;
+}
+
+@-webkit-keyframes fantasmaBorroso {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fantasmaBorroso {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* animaciones de animista.net */
+.slideInFwdCenter {
+  -webkit-animation: slideInFwdCenter 0.5s ease-out 0.5s both;
+  animation: slideInFwdCenter 0.5s ease-out 0.5s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-4-20 13:56:28
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-fwd-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes slideInFwdCenter {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFwdCenter {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.flicker4 {
+  -webkit-animation: flicker4 6s linear infinite both;
+  animation: flicker4 6s linear infinite both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-10-20 17:2:16
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation flicker-4
+ * ----------------------------------------
+ */
+@-webkit-keyframes flicker4 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  31.98% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  32.8% {
+    opacity: 0;
+  }
+  32.82% {
+    opacity: 1;
+  }
+  34.98% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  35.7% {
+    opacity: 0;
+  }
+  35.72% {
+    opacity: 1;
+  }
+  36.98% {
+    opacity: 1;
+  }
+  37% {
+    opacity: 0;
+  }
+  37.6% {
+    opacity: 0;
+  }
+  37.62% {
+    opacity: 1;
+  }
+  67.98% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+  }
+  68.4% {
+    opacity: 0;
+  }
+  68.42% {
+    opacity: 1;
+  }
+  95.98% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  96.7% {
+    opacity: 0;
+  }
+  96.72% {
+    opacity: 1;
+  }
+  98.98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  99.6% {
+    opacity: 0;
+  }
+  99.62% {
+    opacity: 1;
+  }
+}
+@keyframes flicker4 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  31.98% {
+    opacity: 1;
+  }
+  32% {
+    opacity: 0;
+  }
+  32.8% {
+    opacity: 0;
+  }
+  32.82% {
+    opacity: 1;
+  }
+  34.98% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  35.7% {
+    opacity: 0;
+  }
+  35.72% {
+    opacity: 1;
+  }
+  36.98% {
+    opacity: 1;
+  }
+  37% {
+    opacity: 0;
+  }
+  37.6% {
+    opacity: 0;
+  }
+  37.62% {
+    opacity: 1;
+  }
+  67.98% {
+    opacity: 1;
+  }
+  68% {
+    opacity: 0;
+  }
+  68.4% {
+    opacity: 0;
+  }
+  68.42% {
+    opacity: 1;
+  }
+  95.98% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  96.7% {
+    opacity: 0;
+  }
+  96.72% {
+    opacity: 1;
+  }
+  98.98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  99.6% {
+    opacity: 0;
+  }
+  99.62% {
+    opacity: 1;
+  }
+}
+
+.shakeBottom {
+  -webkit-animation: shakeBottom 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shakeBottom 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-12-28 14:55:19
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes shakeBottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+@keyframes shakeBottom {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
 }
